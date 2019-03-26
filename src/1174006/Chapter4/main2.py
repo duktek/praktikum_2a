@@ -5,6 +5,9 @@ Created on Mon Mar 25 21:40:25 2019
 @author: vanerz
 """
 
-lib = __import__('1174006_pandas')
+lib = __import__('1174006pandas')
 
-pandas = lib.bukaModeListPandas();
+lib.bukaModeListPandas()
+lib.bukaModeDictPandas()
+
+lib.tulisCsvPandas()
