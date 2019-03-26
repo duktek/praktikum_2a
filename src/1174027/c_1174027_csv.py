@@ -4,33 +4,31 @@ Created on Mon Mar 25 17:40:00 2019
 
 @author: Aegis
 """
-import pandas
 import csv
+import pandas
 
-def bacacsv():
+def bacacsvlist():
     with open('1174027.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
         for row in csv_reader:
             if line_count == 0:
-                print(f'Column names are {", ".join(row)}')
+                print(f' {", ".join(row)}')
                 line_count += 1
             else:
-                print(f'\t NPM : {row[0]} Nama : {row[1]} Kelas : {row[2]}.')
+                print(f'\t Orang Ini Memiliki NPM {row[0]} Bernama \ {row[1]} Berada Dikelas {row[2]}.')
                 line_count += 1
-                print(f'Processed {line_count} lines.')
 
-def bacadictionary():
+def bacacsvdictionary():
     with open('1174027.csv', mode='r') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         line_count = 0
         for row in csv_reader:
             if line_count == 0:
-                print(f'Column names are {", ".join(row)}')
+                print(f' {", ".join(row)}')
                 line_count += 1
-            print(f'\t NPM : {row["name"]} Nama : {row["department"]} Kelas :  {row["birthday month"]}.')
+            print(f'\t Orang Ini Memiliki NPM : {row["name"]} Bernama : {row["department"]} Berada Dikelas : {row["birthday month"]}.')
             line_count += 1
-        print(f'Processed {line_count} lines.')
 
 def nulis():
     with open('test-tulis.csv', mode='w') as employee_file:
@@ -39,6 +37,6 @@ def nulis():
         employee_writer.writerow(['Ucok', 'Tukang', 'November'])
         employee_writer.writerow(['Udin', 'Mandor', 'April'])
 
-def bacapandas():
+def bacalistpandas():
     df = pandas.read_csv('1174027.csv')
     print(df)
