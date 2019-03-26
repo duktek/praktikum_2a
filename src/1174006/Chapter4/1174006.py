@@ -52,3 +52,18 @@ import pandas
 df = pandas.read_csv('teori.csv')
 df.to_csv('teori4.csv')
     
+#Fungsi Try Except 
+def bacaCsvPandas():
+    try:
+        df = pandas.read_csv('teori.csv')
+        print(dt)
+    except SyntaxError:
+        print("Kesalahan penulisan syntax")
+    except NameError:
+        print("Variable tersebut tidak ada")
+    except TypeError:
+        print("Tipe data salah")
+    except:
+        print("Terjadi sebuah kesalahan")
+
+bacaCsvPandas()
