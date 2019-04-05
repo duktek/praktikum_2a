@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Mar 25 21:40:25 2019
+Created on Tue Mar 26 12:38:12 2019
 
-@author: vanerz
+@author: dezha
 """
 
-lib = __import__('1174006pandas')
+lib = __import__('1174025pandas')
 
 lib.bukaModeListPandas()
 lib.bukaModeDictPandas()
